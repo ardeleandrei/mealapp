@@ -1,0 +1,45 @@
+{
+  "name": "mealapp",
+  "version": "1.0.0",
+  "description": "reandom meal generator",
+  "main": "index.js",
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "esm": "^3.2.25",
+    "fetch": "^1.1.0",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "build": "babel src -d public -watch",
+    "start": "babel-node index.js",
+    "debug": "babel-node debug index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardeleandrei/mealplanner.git"
+  },
+  "keywords": [
+    "meal",
+    "planner"
+  ],
+  "author": "Andrei Ardelean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardeleandrei/mealplanner/issues"
+  },
+  "homepage": "https://github.com/ardeleandrei/mealplanner#readme"
+}

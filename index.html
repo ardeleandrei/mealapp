@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width" />
+  <head>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Meal Planner</title>
+    <script  src="index.js" type = "module"></script>
+    <script  src="darkmode.js" type = "module"></script>
+    <link href="header.css" rel="stylesheet" type="text/css" />
+    <link href="content.css" rel="stylesheet" type="text/css" />
+    <link href="modal.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <label class="switch">
+      <input type="checkbox" id="modeToggle" />
+      <span class="slider round"></span>
+    </label>
+    <div class="container">
+      <div class="header">
+        <h1>Feeling hungry?</h1>
+        <h2>Get a random meal by clicking the button</h2>
+        <button class="button" id="getMealBtn">GET MEAL 🍔</button>
+      </div>
+      <div class="content">
+        <div class="imgBtnWrap" id = "foodImage">
+            <div class = "overlayPlay" ></div>
+        </div>
+        
+        <div class="textContent">
+          <h1 id="mealTitle"></h1>
+          <p id="category"><span>Category</span>: Dessert</p>
+          <p id="tags">
+            <span>Tags</span>: Dessert, Dairy, Pudding, Cake, Breakfast
+          </p>
+          <p id="instructions">
+          </p>
+          <h1 id="ingredients">Ingredients:</h1>
+          <ul class="dashed" id="list"></ul>
+        </div>
+      </div>
+    </div>
+      <div class="modal" id="modalVideo" style = "visibility: hidden; opacity: 0;">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+              <span class="closeBtn" id="closeBtn">&times;</span>
+              <iframe
+              id="videoElement"
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+      </div>
+      <div class="footer"></div>
+  </body>
+</html>

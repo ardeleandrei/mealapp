@@ -1,0 +1,102 @@
+.content {
+  display: flex;
+  justify-content: flex-start;
+  border: solid var(--main-border-color) 1px;
+  border-radius: 10px;
+  max-width: calc(97.5vw - 15px);
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 1px 8px -4px rgba(87, 87, 87, 0.63);
+  -moz-box-shadow: 0px 1px 8px -4px rgba(87, 87, 87, 0.63);
+  box-shadow: 0px 1px 8px -4px rgba(87, 87, 87, 0.63);
+}
+
+.textContent {
+  word-wrap: break-word;
+  padding: 20px;
+  padding-top: 0;
+  text-align: left;
+}
+
+p {
+  font-size: 0.6em;
+  font-family: "PT Sans", sans-serif;
+  color: var(--main-p-color);
+  padding: 5px;
+}
+
+#ingredients {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+span {
+  font-weight: bold;
+}
+
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+li {
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+  color: var(--main-p-color);
+}
+
+#category {
+  margin-top: -2px;
+}
+
+#tags {
+  margin-top: -10px;
+}
+
+#instructions {
+  margin-top: 25px;
+}
+
+.overlayPlay{
+  position: relative;
+  display: block;
+  opacity:0.5;
+  z-index: 0;
+width: 30vw;
+height: 30vw;
+border-radius: 10px;
+background-size: 50%;
+background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("./icons/playbutton.png");
+}
+
+.overlayPlay:hover{
+  opacity: 1;
+  transition: 200ms;
+  box-shadow: 0 0 150px rgba(0,0,0,0.2) inset;
+  
+}
+
+.imgBtnWrap:hover{
+  cursor: pointer !important;
+}
+
+#foodImage{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.imgBtnWrap{
+  height: 30vw;
+}
