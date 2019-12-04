@@ -3,7 +3,7 @@
 .header {
   grid-area: header;
   height: auto;
-  width: 100vw;
+  margin-top: -45px;
   width: 100%;
 }
 
@@ -30,12 +30,12 @@ h2 {
   border-radius: 4px;
   padding: 15px white;
   color: white;
-  width: 123px;
-  height: 30px;
+  width: 130px;
+  height: 35px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -53,9 +53,10 @@ h2 {
 
 /* The switch - the box around the slider */
 .switch {
-  position: absolute;
+  position: relative;
   display: inline-block;
-  right: 2%;
+  left:calc(100% - 74px);
+  top: 10px;
   width: 60px;
   height: 34px;
   border: solid transparent 4px;
@@ -114,4 +115,60 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color:gray;
+  background-color: var(--main-bg-color);
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: var(--main-btn-color);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.searchwrap{
+  width: 170px;
+  position: absolute;
+  top: 14px;
+  left: 10px;
+
+}
+
+@media screen and (max-width: 650px) {
+  .searchwrap{
+    position: relative;
+    margin: 0 auto;
+  }
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-left: -7%;
+  }
 }

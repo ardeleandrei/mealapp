@@ -76,7 +76,7 @@ border-radius: 10px;
 background-size: 50%;
 background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("./icons/playbutton.png");
+  background-image: url("../icons/playbutton.png");
 }
 
 .overlayPlay:hover{
@@ -85,7 +85,9 @@ background-position: center center;
   box-shadow: 0 0 150px rgba(0,0,0,0.2) inset;
   
 }
-
+.imgBtnWrap{
+  height: 30vw;
+}
 .imgBtnWrap:hover{
   cursor: pointer !important;
 }
@@ -97,6 +99,4 @@ background-position: center center;
   border-radius: 10px;
 }
 
-.imgBtnWrap{
-  height: 30vw;
-}
+

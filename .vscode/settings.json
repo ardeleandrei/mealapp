@@ -2,5 +2,11 @@
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "prettier.requireConfig": true,
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "prettier.insertPragma": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate":[
+        "javascript"
+    ],
+    "liveServer.settings.port": 5501
 }

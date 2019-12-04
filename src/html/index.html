@@ -2,13 +2,15 @@
 <html>
   <meta name="viewport" content="width=device-width" />
   <head>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    
     <title>Meal Planner</title>
-    <script  src="index.js" type = "module"></script>
-    <script  src="darkmode.js" type = "module"></script>
-    <link href="header.css" rel="stylesheet" type="text/css" />
-    <link href="content.css" rel="stylesheet" type="text/css" />
-    <link href="modal.css" rel="stylesheet" type="text/css" />
+    <script  src="../js/index.js" type = "module"></script>
+    <script  src="../js/darkmode.js" type = "module"></script>
+    <link href="../css/index.css" rel="stylesheet" type="text/css" />
+    <link href="../css/header.css" rel="stylesheet" type="text/css" />
+    <link href="../css/content.css" rel="stylesheet" type="text/css" />
+    <link href="../css/modal.css" rel="stylesheet" type="text/css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
   <body>
@@ -18,9 +20,19 @@
     </label>
     <div class="container">
       <div class="header">
+          
         <h1>Feeling hungry?</h1>
         <h2>Get a random meal by clicking the button</h2>
+        
         <button class="button" id="getMealBtn">GET MEAL 🍔</button>
+        <div class="searchwrap">
+            <div class="search">
+               <input type="text" class="searchTerm" id="searchTerm" placeholder="Search" value = "">
+               <button type="submit" class="searchButton" id="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
       </div>
       <div class="content">
         <div class="imgBtnWrap" id = "foodImage">
