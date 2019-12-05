@@ -27,7 +27,7 @@
         <button class="button" id="getMealBtn">GET MEAL 🍔</button>
         <div class="searchwrap">
             <div class="search">
-               <input type="text" class="searchTerm" id="searchTerm" placeholder="Search" value = "">
+               <input type="text" class="searchTerm" id="searchTerm" placeholder="Search meal" value = "">
                <button type="submit" class="searchButton" id="searchButton">
                  <i class="fa fa-search"></i>
               </button>
@@ -55,8 +55,8 @@
       <div class="modal" id="modalVideo" style = "visibility: hidden; opacity: 0;">
 
           <!-- Modal content -->
-          <div class="modal-content">
-              <span class="closeBtn" id="closeBtn">&times;</span>
+          <div class="modal-content" id = "modal-content">
+              
               <iframe
               id="videoElement"
               src=""
@@ -64,6 +64,7 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <span class="closeBtn" id="closeBtn">&times;</span>
           </div>
       </div>
       <div class="footer"></div>

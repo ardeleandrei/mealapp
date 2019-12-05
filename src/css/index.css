@@ -53,7 +53,7 @@ html,body {
   background-color: var(--main-bg-color);
   text-align: center;
   padding: 12px 12px;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .closeBtn {
@@ -82,13 +82,4 @@ html,body {
     width: 100% !important; /* Could be more or less, depending on screen size */
   }
 
-  .closeBtn {
-    position: absolute;
-    color:white;
-    float: right;
-    font-size: 60px;
-    font-weight: bold;
-    top: 15px;
-    left: 10px;
-  }
 }

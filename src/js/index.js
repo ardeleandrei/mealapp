@@ -29,7 +29,8 @@ function generate(url) {
       document.getElementById('videoElement').src = strYoutube
       image.style.backgroundImage = `url('${data.meals[0].strMealThumb}')`
       category.innerHTML = `<span>Category</span>: ${data.meals[0].strCategory}`
-      tags.innerHTML = `<span>Tags</span>: ${data.meals[0].strTags}`
+
+      tags.innerHTML = data.meals[0].strTags ? `<span>Tags</span>: ${data.meals[0].strTags}` : ''
       instructions.innerHTML = `${data.meals[0].strInstructions}`
       ul.innerHTML = ''
       for (let i = 0; i < 21; i++) {
@@ -66,11 +67,17 @@ function toggleModal() {
 window.onload = generate(defaultURL)
 document.getElementById('foodImage').addEventListener('click', toggleModal)
 document.getElementById('modalVideo').addEventListener('click', toggleModal)
+
 document.getElementById('getMealBtn').addEventListener('click', function() {
-  generate(searchURL)
+  generate(defaultURL)
 }, false)
 document.getElementById('modeToggle').addEventListener('click', darkMode)
 document.getElementById('searchButton').addEventListener('click', initSearch)
+document.getElementById('searchTerm').onkeydown = function(e) {
+  if (e.keyCode == 13) {
+    initSearch()
+  }
+}
 
 function initSearch() {
   console.log(document.getElementById('searchTerm').value)
