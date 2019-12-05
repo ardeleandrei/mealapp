@@ -22,24 +22,27 @@ function generate(url) {
     try {
       const response = await fetch(url)
       const data = await response.json()
-      console.log(data.meals[0].strYoutube)
-      strYoutube = data.meals[0].strYoutube
-      mealTitle.innerHTML = `${data.meals[0].strMeal}`
+      var rndm = 0
+      if (url.includes('search')) {
+        rndm = Math.floor(Math.random() * Math.floor(data.meals.length))
+      }
+      strYoutube = data.meals[rndm].strYoutube
+      mealTitle.innerHTML = `${data.meals[rndm].strMeal}`
       strYoutube = strYoutube.replace('watch?v=', 'embed/')
       document.getElementById('videoElement').src = strYoutube
-      image.style.backgroundImage = `url('${data.meals[0].strMealThumb}')`
-      category.innerHTML = `<span>Category</span>: ${data.meals[0].strCategory}`
+      image.style.backgroundImage = `url('${data.meals[rndm].strMealThumb}')`
+      category.innerHTML = `<span>Category</span>: ${data.meals[rndm].strCategory}`
 
-      tags.innerHTML = data.meals[0].strTags ? `<span>Tags</span>: ${data.meals[0].strTags}` : ''
-      instructions.innerHTML = `${data.meals[0].strInstructions}`
+      tags.innerHTML = data.meals[rndm].strTags ? `<span>Tags</span>: ${data.meals[rndm].strTags}` : ''
+      instructions.innerHTML = `${data.meals[rndm].strInstructions}`
       ul.innerHTML = ''
       for (let i = 0; i < 21; i++) {
         const ingrLabel = `strIngredient${i}`
         const measureLabel = `strMeasure${i}`
-        if (data.meals[0][ingrLabel]) {
+        if (data.meals[rndm][ingrLabel]) {
           const li = document.createElement('li')
           li.style.color = document.getElementById('instructions').style.color
-          li.appendChild(document.createTextNode(`${data.meals[0][ingrLabel]} - ${data.meals[0][measureLabel]}`))
+          li.appendChild(document.createTextNode(`${data.meals[rndm][ingrLabel]} - ${data.meals[rndm][measureLabel]}`))
           ul.appendChild(li)
         }
       }
