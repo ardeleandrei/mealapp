@@ -30,8 +30,8 @@ h2 {
   border-radius: 4px;
   padding: 15px white;
   color: white;
-  width: 130px;
-  height: 35px;
+  width: 140px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -40,7 +40,7 @@ h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .slider.round {
@@ -121,6 +121,7 @@ input:checked + .slider:before {
   width: 100%;
   position: absolute;
   display: flex;
+  top :-15px;
 }
 
 .searchTerm {
@@ -128,7 +129,7 @@ input:checked + .slider:before {
   border: 3px solid #00B4CC;
   border-right: none;
   padding: 5px;
-  height: 20px;
+  height: 26px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color:gray;
@@ -141,7 +142,7 @@ input:checked + .slider:before {
 
 .searchButton {
   width: 40px;
-  height: 36px;
+  height: 42px;
   border: 1px solid #00B4CC;
   background: var(--main-btn-color);
   text-align: center;
@@ -171,6 +172,6 @@ input:checked + .slider:before {
     width: 100%;
     position: relative;
     display: flex;
-
+    top: 2px;
   }
 }
