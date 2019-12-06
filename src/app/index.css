@@ -1,0 +1,21 @@
+:root body {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .header {
+  position: relative;
+  border: 1px solid red;
+  height: auto;
+}
+
+.app .content {
+  position: relative;
+  flex: 1;
+  border: 1px solid blue;
+}

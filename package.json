@@ -1,45 +1,45 @@
 {
-  "name": "mealapp",
+  "name": "randommeal",
   "version": "1.0.0",
-  "description": "reandom meal generator",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "es6-promise": "^4.2.8",
-    "esm": "^3.2.25",
-    "fetch": "^1.1.0",
-    "isomorphic-fetch": "^2.2.1"
+  "scripts": {
+    "start": "webpack --mode development --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NichitaD/RandomMeal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NichitaD/RandomMeal/issues"
+  },
+  "homepage": "https://github.com/NichitaD/RandomMeal#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.1",
     "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^1.19.1"
+    "html-loader": "^0.5.5",
+    "js-loader": "^0.1.1",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
-  "scripts": {
-    "build": "babel src -d public -watch",
-    "start": "babel-node index.js",
-    "debug": "babel-node debug index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ardeleandrei/mealplanner.git"
-  },
-  "keywords": [
-    "meal",
-    "planner"
-  ],
-  "author": "Andrei Ardelean",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ardeleandrei/mealplanner/issues"
-  },
-  "homepage": "https://github.com/ardeleandrei/mealplanner#readme"
+  "dependencies": {
+    "liveserver": "^0.1.20",
+    "mustache": "^3.1.0"
+  }
 }
